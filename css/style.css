@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Oswald&family=Teko&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins',sans-serif;
+}
+
+/* ----- root ----- */
+:root{
+    --luffy: #C12030, #7A0D24;
+    
+    --zoro: #27CAAB, #35675C;
+    
+    --usopp: #C28E3A, #F55B2D;
+    
+    --nami: #00DDFF, #008CE5;
+    
+    --sanji: #F8DF25, #A67C00;
+    
+    --chopper: #EE857D, #DF794B;
+    
+    --robin: #FFBAE1, #AC3899;
+    
+    --franky: #50FEFE, #0043BA;
+    
+    --brook: #2B2B34, #020202;
+    
+    --jinbe: #FF5D30, #FF423E;
+    
+    --yamato: #F7F0F4, #00AD8B;
+}
+
+/* ----- container ----- */
+#container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- images ----- */
+#images{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .5s;
+}
+
+.cardImagens{
+    height: 140px;
+    width: 140px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: .5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.cardImagens img{
+    height: 110%;
+    width: 110%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.cardImagens img:hover{
+    height: 115%;
+    width: 115%;
+    transition: .5s;
+}
+
+.cardImagens:hover{
+    background: rgba(255,255,255,.6);
+    transition: .5s;
+}
+
+#imgChild{
+    position: absolute;
+}
+
+#imgTeenager{
+    position: absolute;
+    animation-delay: 0.10s;
+}
+
+#imgAdult{
+    position: absolute;
+    animation-delay: 0.15s;
+}
+
+#images h2{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: poppins, sans-serif;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* ----- infoPersonagem ----- */
+#infoPersonagem{
+    height: 100%;
+    width: 80%;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ----- menu ----- */
+#menu{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prev, #next{
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    transform: scale(1.0);
+    transition: all .5s;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+
+#prev:hover, #next:hover{
+    transition: all .5s;
+    transform: scale(1.5);
+    background-color: rgba(255,255,255,.1);
+}
+
+#menu img{
+    height: 90%;
+    width: auto;
+    object-fit: cover;
+    transition: .5s;
+}
+
+/* ----- personagem ----- */
+#containerPersonagem{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerPersonagem img{
+    height: auto;
+    width: 40%;
+    object-fit: cover;
+}
+
+#imgMain{
+    position: relative;
+}
+
+#personagemDados{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#personagemDados h2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7em;
+    color: rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    line-height: 100px;
+    margin-bottom: 100px;
+}
+
+@font-face {
+    font-family: 'ONE PIECE';
+    src: url('../font/onepiecefont.ttf') format('truetype');
+}
+  
+.pirateFont{
+    font-family: 'ONE PIECE';
+    margin-left: -100px;
+    position: relative;
+}
+
+#personagemDados h2 #subTitle{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transition: .5s;
+}
+
+/* ----- container Dados Pesonagem ----- */
+#containerDadosPesonagem{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cardDados{
+    height: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    margin-bottom: 5px;
+}
+
+.cardDados:hover{
+    background-color: rgba(255,255,255,0.3);
+    transition: all .5s;
+}
+
+.titleCardDados, .infoCardDados{
+    height: 20px;
+    width: 120px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    box-sizing: border-box;
+    
+}
+
+.infoCardDados{
+    color: #fff9;
+    width: 400px;    
+    justify-content: flex-start;
+    position: relative;
+}
+
+.bar{
+    height: 8px;
+    width: 500px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+
+    padding: 1px;
+    --progress: 0;
+}
+
+.bar::before{
+    content: '';
+    height: 100%;
+    width: calc(var(--progress) * 1%);
+    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
+    transform: skewX(-50deg);
+    transition: all 2s ease;
+    margin-left: -20px;
+}
+
+.color{
+    color: #999;
+}
+
+
+/* ============= animate ============= */
+/* ----- -- ----- */
+.toRightAnimate{
+    animation: toRight ease .4s forwards;
+}
+
+@keyframes toRight {
+    to{
+        left: 0;
+    }
+}
+
+/* ----- -- ----- */
+.toRightSubTitle{
+    animation: toRightSubTitle ease .4s forwards;
+}
+
+@keyframes toRightSubTitle {
+    to{
+        left: 30%;
+    }
+}
+
